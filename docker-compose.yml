@@ -5,3 +5,6 @@ services:
     build:
       context: .
       dockerfile: deployments/Dockerfile.app
+    volumes:
+      - ./out:/opt/build/out
+    command: bun run start

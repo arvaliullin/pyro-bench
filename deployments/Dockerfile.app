@@ -12,5 +12,3 @@ WORKDIR /opt/build
 COPY . .
 
 RUN /usr/bin/bash /opt/build/scripts/build.sh
-
-CMD [ "/usr/bin/bash", "/opt/build/scripts/build.sh" ]

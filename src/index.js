@@ -1,5 +1,7 @@
 import fs from 'fs';
 import path from 'path';
+import os from 'os';
+
 import { performanceExperiments } from './performance/performance.js';
 
 import './wasm_exec.js';
@@ -9,7 +11,10 @@ const filename = `${cwd}/public/lib_go.out.wasm`;
 const source = fs.readFileSync(filename);
 const typedArray = new Uint8Array(source);
 
-const outputDir = path.join(cwd, 'out');
+
+const osType = os.type(); 
+const outputDir = path.join(cwd, 'out', osType); 
+
 if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir);
 }
