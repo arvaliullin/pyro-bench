@@ -1,3 +1,4 @@
+New-Item -ItemType Directory -Force -Path "$PWD\out" | Out-Null
 
 Copy-Item "$(go env GOROOT)\misc\wasm\wasm_exec.js" $PWD\src
 
