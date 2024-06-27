@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  pyro-bench:
+    build:
+      context: .
+      dockerfile: deployments/Dockerfile.app
+    command: bun run start
