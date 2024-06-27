@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-cp -rf $PWD/dist $PWD/out
-
 cp "$(go env GOROOT)/misc/wasm/wasm_exec.js" $PWD/src
 
 # Build Go WebAssembly

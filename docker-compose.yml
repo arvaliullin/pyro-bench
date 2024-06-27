@@ -5,4 +5,3 @@ services:
     build:
       context: .
       dockerfile: deployments/Dockerfile.app
-    command: bun run start
