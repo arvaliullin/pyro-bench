@@ -1,7 +1,7 @@
 FROM golang:latest
 
 RUN apt update && apt upgrade -y
-RUN apt install --yes curl unzip bash
+RUN apt install --yes curl unzip bash neofetch
 
 ENV BUN_INSTALL="/usr/local"
 
@@ -12,3 +12,5 @@ WORKDIR /opt/build
 COPY . .
 
 RUN /usr/bin/bash /opt/build/scripts/build.sh
+RUN neofetch
+RUN bun --version
